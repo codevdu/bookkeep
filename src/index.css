@@ -1,17 +1,64 @@
-:root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+@import 'tailwindcss';
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+@theme {
+  --color-*: initial;
+  
+  --color-white: #ffffff;
+  --color-parchment-100: #fafafa;
+  --color-parchment-200: #ffffff;
+  --color-parchment-300: #e4e4e7;
+  --color-ink-light: #71717a;
+  --color-ink-dark: #09090b;
+
+  --color-book-light: #f3e8ff;
+  --color-book-base: #7c3aed;
+  --color-book-dark: #6d28d9;
+
+  --color-status-available-bg: #f0fdf4;
+  --color-status-available-text: #16a34a;
+  
+  --color-status-borrowed-bg: #fffbeb;
+  --color-status-borrowed-text: #d97706;
+  
+  --color-status-overdue-bg: #fef2f2;
+  --color-status-overdue-text: #dc2626;
+
+  --font-serif: "Plus Jakarta Sans", "sans-serif";
+
+  --font-sans: "Inter", "system-ui", "sans-serif";
+  --font-mono: "JetBrains Mono", "sans-serif";
+}
+
+@layer base {
+  html, body {
+    background-color: var(--color-parchment-100);
+    color: var(--color-ink-dark);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  *:focus-visible {
+    outline: none;
+    box-shadow: var(--shadow-focus);
+    border-color: var(--color-book-base);
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-parchment-300);
+    border-radius: var(--radius-xl);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-book-base);
+    border-radius: var(--radius-xl);
+    transition: all;
+  }
 }
