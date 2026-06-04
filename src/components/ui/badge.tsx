@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import type React from "react";
-import Text from "./text";
+import Text from "../ui/text";
 import { cva, cx, type VariantProps } from "class-variance-authority";
 import Skeleton from "./skeleton";
 

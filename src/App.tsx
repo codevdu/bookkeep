@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Text from "./components/ui/text";
 import Badge from "./components/ui/badge";
-import Button from "./components/button";
-import InputText from "./components/input";
+import Button from "./components/ui/button";
+import InputText from "./components/ui/input";
 
 export default function App() {
   const [search, setSearch] = useState("");
