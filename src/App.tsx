@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Text from "./components/text";
-import Badge from "./components/badge";
+import Text from "./components/ui/text";
+import Badge from "./components/ui/badge";
 import Button from "./components/button";
 import InputText from "./components/input";
 
